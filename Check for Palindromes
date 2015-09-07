@@ -1,7 +1,8 @@
 function palindrome(str) {
-  str = str.replace(/[^A-Z0-9]/ig, "").toLowerCase();
- // str = str.replace(/\s+/g, '');
+  str = str.replace(/\W/ig, "").toLowerCase(); 
+ // \W refers to everything not a number or letter, replaces -> [^A-Z0-9]
+ // /ig = ignore case, global -check all characters instead of just first character and ignore case
+ // , "" dictates to replace the characters specified in the regular expression with nothing
   return str == str.split('').reverse().join('');
 }
-
 palindrome("eye");
