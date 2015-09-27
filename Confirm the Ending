@@ -11,3 +11,21 @@ function end(str, target) {
 }
 
 end("Bastian", "n", "");
+
+//easier version
+function end(str, target) {
+  return str.substr(-target.length)==target ? true : false;
+}
+
+//(-target.length) translates to (str.length - target.length, str.length);
+//  If a negative number is given, it is treated as strLength + start where strLength is the length of the string (for example, if start is -3 it is treated as strLength - 3.)
+
+//target ? true : false; is just a shorter if statement, could be 
+if (str.substr(-target.length)===target){
+return true;
+}
+else
+{
+return false
+}
+}
