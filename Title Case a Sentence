@@ -11,3 +11,14 @@ function titleCase(str) {
 }
 
 titleCase("I'm a little tea pot", "");
+
+function titleCase(str) {
+  var arr=str.toLowerCase().split(" ");
+  for (var i=0,max=arr.length;i<max;i+=1){
+    var f = arr[i].charAt(0).toUpperCase();
+    arr[i] = arr[i].replace(arr[i].charAt(0), f)
+  }
+  return arr.join(" ");
+}
+
+titleCase("I'm a little tea pot", "");
