@@ -1,0 +1,9 @@
+function mutation(arr) {
+  for (i=0; i < arr[1].length; i+=1) {
+    var char = arr[1].toLowerCase().charAt(i);
+    if (arr[0].toLowerCase().indexOf(char) === -1)
+      return false;
+  }
+  return true;
+}
+mutation(["hello", "hey"], "");
