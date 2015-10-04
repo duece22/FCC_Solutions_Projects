@@ -1,0 +1,11 @@
+function destroyer(arr) {
+  // Turn arguments variable into a full array
+  var args = Array.prototype.slice.call(arguments);
+  // Remove first argument from array of arguments
+  args.splice(0, 1);
+  //filter out elements that are on the arguments array and keep the ones that are not
+  return arr.filter(function(value) {
+    return args.indexOf(value) < 0;    
+  });
+}
+destroyer([1, 2, 3, 1, 2, 3], 2, 3, "");
