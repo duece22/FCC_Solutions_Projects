@@ -15,3 +15,12 @@ function bouncer(arr) {
   return arr.filter(noFalsy); 
 }
 bouncer([7, "ate", "", false, 9], "");
+
+// shorter version
+function bouncer(arr) {
+  return arr.filter(function(value){
+    var x = new Boolean(value);
+    return x!= false;
+  }); 
+}
+bouncer([7, "ate", "", false, 9], "");
