@@ -4,8 +4,8 @@ function bouncer(arr) {
   // Retreive primitive Boolean value based on the element in array currently being tested via filter method
   // This primitive Boolean value equates to false if the value being added is is omitted or is 0, -0, null, false, NaN, undefined, or the empty string ("")
   var x = new Boolean(value);
-  //returning false to the filter method removes the element from the array
   if (x == false)
+  //returning false to the filter method removes the element from the array
     return false;
   //returning true to the filter method keeps the element in the array
   else
